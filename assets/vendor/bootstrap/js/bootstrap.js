@@ -1,8 +1,4 @@
-/*!
-  * Bootstrap v5.3.8 (https://getbootstrap.com/)
-  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-  */
+
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('@popperjs/core')) :
   typeof define === 'function' && define.amd ? define(['@popperjs/core'], factory) :
@@ -28,16 +24,9 @@
 
   const Popper__namespace = /*#__PURE__*/_interopNamespaceDefault(Popper);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap dom/data.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
 
-  /**
-   * Constants
-   */
+
+  
 
   const elementMap = new Map();
   const Data = {
@@ -77,11 +66,7 @@
   };
 
   /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+  
 
   const MAX_UID = 1000000;
   const MILLISECONDS_MULTIPLIER = 1000;
@@ -100,7 +85,7 @@
     return selector;
   };
 
-  // Shout-out Angus Croll (https://goo.gl/pxwQGp)
+
   const toType = object => {
     if (object === null || object === undefined) {
       return `${object}`;
@@ -108,9 +93,7 @@
     return Object.prototype.toString.call(object).match(/\s([a-z]+)/i)[1].toLowerCase();
   };
 
-  /**
-   * Public Util API
-   */
+  
 
   const getUID = prefix => {
     do {
@@ -322,17 +305,10 @@
     return list[Math.max(0, Math.min(index, listLength - 1))];
   };
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap dom/event-handler.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+ 
 
 
-  /**
-   * Constants
-   */
+  
 
   const namespaceRegex = /[^.]*(?=\..*)\.|.*/;
   const stripNameRegex = /\..*/;
@@ -544,12 +520,6 @@
     return obj;
   }
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap dom/manipulator.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
 
   function normalizeData(value) {
     if (value === 'true') {
@@ -601,18 +571,8 @@
     }
   };
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/config.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-
-  /**
-   * Class definition
-   */
-
+ 
+  
   class Config {
     // Getters
     static get Default() {
@@ -654,24 +614,12 @@
     }
   }
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap base-component.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
 
-
-  /**
-   * Constants
-   */
+  
 
   const VERSION = '5.3.8';
 
-  /**
-   * Class definition
-   */
-
+  
   class BaseComponent extends Config {
     constructor(element, config) {
       super();
@@ -737,10 +685,7 @@
     if (!selector || selector === '#') {
       let hrefAttribute = element.getAttribute('href');
 
-      // The only valid content that could double as a selector are IDs or classes,
-      // so everything starting with `#` or `.`. If a "real" URL is used as the selector,
-      // `document.querySelector` will rightfully complain it is invalid.
-      // See https://github.com/twbs/bootstrap/issues/32273
+
       if (!hrefAttribute || !hrefAttribute.includes('#') && !hrefAttribute.startsWith('.')) {
         return null;
       }
@@ -814,12 +759,7 @@
     }
   };
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/component-functions.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+ 
 
   const enableDismissTrigger = (component, method = 'hide') => {
     const clickEvent = `click.dismiss${component.EVENT_KEY}`;
@@ -839,17 +779,10 @@
     });
   };
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap alert.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
 
 
-  /**
-   * Constants
-   */
+
+  
 
   const NAME$f = 'alert';
   const DATA_KEY$a = 'bs.alert';
@@ -859,10 +792,7 @@
   const CLASS_NAME_FADE$5 = 'fade';
   const CLASS_NAME_SHOW$8 = 'show';
 
-  /**
-   * Class definition
-   */
-
+  
   class Alert extends BaseComponent {
     // Getters
     static get NAME() {
@@ -914,17 +844,8 @@
 
   defineJQueryPlugin(Alert);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap button.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
 
-
-  /**
-   * Constants
-   */
+  
 
   const NAME$e = 'button';
   const DATA_KEY$9 = 'bs.button';
@@ -934,10 +855,7 @@
   const SELECTOR_DATA_TOGGLE$5 = '[data-bs-toggle="button"]';
   const EVENT_CLICK_DATA_API$6 = `click${EVENT_KEY$a}${DATA_API_KEY$6}`;
 
-  /**
-   * Class definition
-   */
-
+  
   class Button extends BaseComponent {
     // Getters
     static get NAME() {
@@ -978,17 +896,10 @@
 
   defineJQueryPlugin(Button);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/swipe.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
 
 
-  /**
-   * Constants
-   */
+
+  
 
   const NAME$d = 'swipe';
   const EVENT_KEY$9 = '.bs.swipe';
@@ -1012,10 +923,7 @@
     rightCallback: '(function|null)'
   };
 
-  /**
-   * Class definition
-   */
-
+  
   class Swipe extends Config {
     constructor(element, config) {
       super();
@@ -1106,9 +1014,7 @@
    */
 
 
-  /**
-   * Constants
-   */
+  
 
   const NAME$c = 'carousel';
   const DATA_KEY$8 = 'bs.carousel';
@@ -1166,10 +1072,7 @@
     wrap: 'boolean'
   };
 
-  /**
-   * Class definition
-   */
-
+  
   class Carousel extends BaseComponent {
     constructor(element, config) {
       super(element, config);
@@ -1479,9 +1382,7 @@
    */
 
 
-  /**
-   * Constants
-   */
+  
 
   const NAME$b = 'collapse';
   const DATA_KEY$7 = 'bs.collapse';
@@ -1511,10 +1412,7 @@
     toggle: 'boolean'
   };
 
-  /**
-   * Class definition
-   */
-
+  
   class Collapse extends BaseComponent {
     constructor(element, config) {
       super(element, config);
@@ -1713,9 +1611,7 @@
    */
 
 
-  /**
-   * Constants
-   */
+  
 
   const NAME$a = 'dropdown';
   const DATA_KEY$6 = 'bs.dropdown';
@@ -1771,10 +1667,7 @@
     reference: '(string|element|object)'
   };
 
-  /**
-   * Class definition
-   */
-
+  
   class Dropdown extends BaseComponent {
     constructor(element, config) {
       super(element, config);
@@ -2081,9 +1974,7 @@
    */
 
 
-  /**
-   * Constants
-   */
+  
 
   const NAME$9 = 'backdrop';
   const CLASS_NAME_FADE$4 = 'fade';
@@ -2105,10 +1996,7 @@
     rootElement: '(element|string)'
   };
 
-  /**
-   * Class definition
-   */
-
+  
   class Backdrop extends Config {
     constructor(config) {
       super();
@@ -2205,9 +2093,7 @@
    */
 
 
-  /**
-   * Constants
-   */
+  
 
   const NAME$8 = 'focustrap';
   const DATA_KEY$5 = 'bs.focustrap';
@@ -2226,10 +2112,7 @@
     trapElement: 'element'
   };
 
-  /**
-   * Class definition
-   */
-
+  
   class FocusTrap extends Config {
     constructor(config) {
       super();
@@ -2303,19 +2186,14 @@
    */
 
 
-  /**
-   * Constants
-   */
+  
 
   const SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top';
   const SELECTOR_STICKY_CONTENT = '.sticky-top';
   const PROPERTY_PADDING = 'padding-right';
   const PROPERTY_MARGIN = 'margin-right';
 
-  /**
-   * Class definition
-   */
-
+  
   class ScrollBarHelper {
     constructor() {
       this._element = document.body;
@@ -2401,9 +2279,7 @@
    */
 
 
-  /**
-   * Constants
-   */
+  
 
   const NAME$7 = 'modal';
   const DATA_KEY$4 = 'bs.modal';
@@ -2439,10 +2315,7 @@
     keyboard: 'boolean'
   };
 
-  /**
-   * Class definition
-   */
-
+  
   class Modal extends BaseComponent {
     constructor(element, config) {
       super(element, config);
@@ -2706,9 +2579,7 @@
    */
 
 
-  /**
-   * Constants
-   */
+  
 
   const NAME$6 = 'offcanvas';
   const DATA_KEY$3 = 'bs.offcanvas';
@@ -2741,10 +2612,7 @@
     scroll: 'boolean'
   };
 
-  /**
-   * Class definition
-   */
-
+  
   class Offcanvas extends BaseComponent {
     constructor(element, config) {
       super(element, config);
@@ -3032,9 +2900,7 @@
    */
 
 
-  /**
-   * Constants
-   */
+  
 
   const NAME$5 = 'TemplateFactory';
   const Default$4 = {
@@ -3061,10 +2927,7 @@
     selector: '(string|element)'
   };
 
-  /**
-   * Class definition
-   */
-
+  
   class TemplateFactory extends Config {
     constructor(config) {
       super();
@@ -3168,9 +3031,7 @@
    */
 
 
-  /**
-   * Constants
-   */
+  
 
   const NAME$4 = 'tooltip';
   const DISALLOWED_ATTRIBUTES = new Set(['sanitize', 'allowList', 'sanitizeFn']);
@@ -3240,10 +3101,7 @@
     trigger: 'string'
   };
 
-  /**
-   * Class definition
-   */
-
+  
   class Tooltip extends BaseComponent {
     constructor(element, config) {
       if (typeof Popper__namespace === 'undefined') {
@@ -3680,9 +3538,7 @@
    */
 
 
-  /**
-   * Constants
-   */
+  
 
   const NAME$3 = 'popover';
   const SELECTOR_TITLE = '.popover-header';
@@ -3700,10 +3556,7 @@
     content: '(null|string|element|function)'
   };
 
-  /**
-   * Class definition
-   */
-
+  
   class Popover extends Tooltip {
     // Getters
     static get Default() {
@@ -3761,9 +3614,7 @@
    */
 
 
-  /**
-   * Constants
-   */
+  
 
   const NAME$2 = 'scrollspy';
   const DATA_KEY$2 = 'bs.scrollspy';
@@ -3800,10 +3651,7 @@
     threshold: 'array'
   };
 
-  /**
-   * Class definition
-   */
-
+  
   class ScrollSpy extends BaseComponent {
     constructor(element, config) {
       super(element, config);
@@ -4021,9 +3869,7 @@
    */
 
 
-  /**
-   * Constants
-   */
+  
 
   const NAME$1 = 'tab';
   const DATA_KEY$1 = 'bs.tab';
@@ -4055,10 +3901,7 @@
   const SELECTOR_INNER_ELEM = `${SELECTOR_INNER}, ${SELECTOR_DATA_TOGGLE}`;
   const SELECTOR_DATA_TOGGLE_ACTIVE = `.${CLASS_NAME_ACTIVE}[data-bs-toggle="tab"], .${CLASS_NAME_ACTIVE}[data-bs-toggle="pill"], .${CLASS_NAME_ACTIVE}[data-bs-toggle="list"]`;
 
-  /**
-   * Class definition
-   */
-
+  
   class Tab extends BaseComponent {
     constructor(element) {
       super(element);
@@ -4291,9 +4134,7 @@
    */
 
 
-  /**
-   * Constants
-   */
+  
 
   const NAME = 'toast';
   const DATA_KEY = 'bs.toast';
@@ -4321,10 +4162,7 @@
     delay: 5000
   };
 
-  /**
-   * Class definition
-   */
-
+  
   class Toast extends BaseComponent {
     constructor(element, config) {
       super(element, config);
